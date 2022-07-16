@@ -1,0 +1,31 @@
+nav {
+    
+    border-bottom: 1px solid black !important;
+}
+
+.content__pai_inicial {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box__options {
+    max-width: 150px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid grey !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content__list {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 5px;
+    align-self: center;
+}

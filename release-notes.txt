@@ -1,0 +1,39 @@
+Conteudo Entregue no projeto
+
+Banco de Dados
+
+Criei 2 scrips para criação do banco de dados juntamente com as tabelas necessárias e dados iniciais.
+após executas esses scrips atenção na string de conexão do banco no projeto,
+pois está com a string de conexão do meu banco local.
+
+Back-End
+
+projeto feito com Web API .net
+testes feitos com Postman - arquivo collection com os testes no diretorio Dev>Back-End>INFO Invest.postman_collection
+
+Front-End
+
+Style feito com HTML/CSS/Bootstrap/simple-notify
+e JavaScript/Jquery como pivo para conexão front/back end
+
+Login - com autenticação usando JWT para fazer a sessão do usuario.
+login Admin - Cadastro de ativos/gerentes
+login Gerente - Cadastro de clientes e Lista de clientes com saldo
+login cliente - Lista de ativos na carteira, compra/venda ativos e saldo
+
+obs: 
+na criação de usuarios gostaria de ter feito com validação de email, para o usuario definir sua senha.
+autenticação na api, daria para fazer de outro jeito, mas com o tempo achei que essa estrutura seria viável.
+
+não criei o publish do projeto, porque iria com a minha string de conexão e não iria funcionar.
+
+Rodando o projeto(start)
+
+verifique se troucou a stirng de conexão do banco de dados!
+execute o arquivo Info_Invest.sln que esta no diretorio Dev>Back-End>Info_Invest>Info_Invest.sln
+após executar o projeto back-end abra o arquvi index.html do login
+ localizado em Dev>Front-End>areas>Login>index.html
+e logar com o usuario login: admin senha: admin123 se executou o script de carga inicial.
+
+
+ 

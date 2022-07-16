@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "fca0a932-e048-4a63-a2e6-0c2e11636083",
+		"name": "INFO Invest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16344197"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Login?login=felipe&senha=1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Login"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "felipe"
+						},
+						{
+							"key": "senha",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verifica",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"felipe\",\r\n    \"senha\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Login?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE0OjU1OjEzLjYzMDc5MjYtMDM6MDAifQ.b_RbFMheWWSuJ_oGiRBsi06c7GopIUhj6iO3L9Nld4s",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Login"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE0OjU1OjEzLjYzMDc5MjYtMDM6MDAifQ.b_RbFMheWWSuJ_oGiRBsi06c7GopIUhj6iO3L9Nld4s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Cl_Senha\" : \"1234567\",\r\n    \"Cl_Login\" : \"luizG\",\r\n    \"Nm_Usuario\" : \"Luiz Gerente cheio da grana\",\r\n    \"Dt_Nascimento\" : \"1989-05-29T00:00:00\",\r\n    \"Fk_Perfil_Id\" : \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Usuario?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE0OjEzOjI0Ljc0Njk1MjItMDM6MDAifQ.Jg6z_9WlEu5iQKO3ulJrDhfucdVPrZc3kuumwAXWkXY",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Usuario"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE0OjEzOjI0Ljc0Njk1MjItMDM6MDAifQ.Jg6z_9WlEu5iQKO3ulJrDhfucdVPrZc3kuumwAXWkXY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id_Usuario\" : \"5\",\r\n    \"Cl_Senha\" : \"1234567\",\r\n    \"Cl_Login\" : \"mariazinha\",\r\n    \"Nm_Usuario\" : \"Maria Gerente\",\r\n    \"Dt_Nascimento\" : \"1989-05-29T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Usuario?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjIiLCJQZXJmaWwiOiIyIiwiTm9tZSI6IkZlbGlwZSBHZXJlbnRlIiwiVGltZU91dCI6IjIwMjItMDUtMjFUMTE6MTk6NTAuOTIwNjU4OC0wMzowMCJ9.Ljs314D_LN2hwjYFTzkFFGHEThgk9b1gvp5F8m27gsY",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Usuario"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjIiLCJQZXJmaWwiOiIyIiwiTm9tZSI6IkZlbGlwZSBHZXJlbnRlIiwiVGltZU91dCI6IjIwMjItMDUtMjFUMTE6MTk6NTAuOTIwNjU4OC0wMzowMCJ9.Ljs314D_LN2hwjYFTzkFFGHEThgk9b1gvp5F8m27gsY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Usuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Usuario?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE0OjQzOjIyLjQyOTI0MTgtMDM6MDAifQ.jnUmssUTN6PK1HOvxtEjX8QlE5KsrTuvLngf1o4R75o",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Usuario"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE0OjQzOjIyLjQyOTI0MTgtMDM6MDAifQ.jnUmssUTN6PK1HOvxtEjX8QlE5KsrTuvLngf1o4R75o"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Ativo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nm_Ativo\" : \"Tether\",\r\n    \"Fk_Grupo_Id\" : \"7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Ativo?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE2OjQwOjM0LjMxNDI2NzUtMDM6MDAifQ.KlMzotAtsM60omGIaqcqGB1BGO-C5YIvQM-Cbz4R_7U",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Ativo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE2OjQwOjM0LjMxNDI2NzUtMDM6MDAifQ.KlMzotAtsM60omGIaqcqGB1BGO-C5YIvQM-Cbz4R_7U"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ativo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7037/Ativo?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE2OjQwOjM0LjMxNDI2NzUtMDM6MDAifQ.KlMzotAtsM60omGIaqcqGB1BGO-C5YIvQM-Cbz4R_7U",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Ativo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE2OjQwOjM0LjMxNDI2NzUtMDM6MDAifQ.KlMzotAtsM60omGIaqcqGB1BGO-C5YIvQM-Cbz4R_7U"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7037/Cliente?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE2OjAyOjUwLjY0MTQ5Ni0wMzowMCJ9.CZHuTQx8sOHhlc3dnDJzHT1OTR4JreuXm6rlfBud5PM",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Cliente"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIxVDE2OjAyOjUwLjY0MTQ5Ni0wMzowMCJ9.CZHuTQx8sOHhlc3dnDJzHT1OTR4JreuXm6rlfBud5PM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro Transicao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nr_Valor\": \"5431.97\",\r\n    \"Fk_Carteira_Id\": \"1\",\r\n    \"Fk_Ativo_Id\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Transicao?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIyVDE0OjM5OjM3LjcyNzQ4OTItMDM6MDAifQ.szp4fNx5FSmNA4E9A0C-a07mVoEjm3nGJDeEfJS-His",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Transicao"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTIyVDE0OjM5OjM3LjcyNzQ4OTItMDM6MDAifQ.szp4fNx5FSmNA4E9A0C-a07mVoEjm3nGJDeEfJS-His"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Transicao",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_Transicao\": 2,\r\n    \"Nr_Valor\": \"10000.59\",\r\n    \"compra_venda\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/Transicao?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTI0VDE5OjUzOjI4Ljk1NjAwNzEtMDM6MDAifQ.o2lFWDqCw2EzkyzBD4FYvmJdYjhjS_UMrFC38rhpNvM",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Transicao"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTI0VDE5OjUzOjI4Ljk1NjAwNzEtMDM6MDAifQ.o2lFWDqCw2EzkyzBD4FYvmJdYjhjS_UMrFC38rhpNvM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Grupo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7037/Ativo/-1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTI0VDAwOjQyOjEwLjcwMTg3NTQtMDM6MDAifQ.y-ElgP9UcEwJtK_1mTuCbEQ81obvV__cAz8aw3MWlCk",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"Ativo",
+						"-1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6IjEiLCJQZXJmaWwiOiIxIiwiTm9tZSI6IkZlbGlwZSIsIlRpbWVPdXQiOiIyMDIyLTA1LTI0VDAwOjQyOjEwLjcwMTg3NTQtMDM6MDAifQ.y-ElgP9UcEwJtK_1mTuCbEQ81obvV__cAz8aw3MWlCk"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
